@@ -1,1 +1,1 @@
-# omdbApi
+# OMDB Api
