@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const OmdbSchema = new mongoose.Schema ({
     "Title":String,
-    "Year":int,
+    "Year":Number,
     "Rated":String,
     "Released":String,
     "Runtime":String,
@@ -10,15 +10,15 @@ const OmdbSchema = new mongoose.Schema ({
     "Director":String,
     "Writer":[String],
     "Actors":[String],
-    "Plot":Text,
+    "Plot":String,
     "Language":String,
     "Country":String,
     "Awards":String,
     "Poster":String,
     "Ratings":[{"Source":"Internet Movie Database","Value":"7.6/10"},{"Source":"Rotten Tomatoes","Value":"84%"},{"Source":"Metacritic","Value":"67/100"}],
-    "Metascore":int,
-    "imdbRating":float,
-    "imdbVotes":int,
+    "Metascore":Number,
+    "imdbRating":Number,
+    "imdbVotes":Number,
     "imdbID":String,
     "Type":String,
     "DVD":String,
@@ -28,6 +28,7 @@ const OmdbSchema = new mongoose.Schema ({
     "Response":Boolean
 });
 
+module.exports = mongoose.model("Omdb", OmdbSchema);
 
 
 // "Title":"Guardians of the Galaxy Vol. 2",
