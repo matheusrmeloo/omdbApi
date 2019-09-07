@@ -15,17 +15,17 @@ const OmdbSchema = new mongoose.Schema ({
     "Country":String,
     "Awards":String,
     "Poster":String,
-    "Ratings":[{"Source":"Internet Movie Database","Value":"7.6/10"},{"Source":"Rotten Tomatoes","Value":"84%"},{"Source":"Metacritic","Value":"67/100"}],
+    // "Ratings":[{"Source":"Internet Movie Database","Value":"7.6/10"},{"Source":"Rotten Tomatoes","Value":"84%"},{"Source":"Metacritic","Value":"67/100"}],
     "Metascore":Number,
     "imdbRating":Number,
-    "imdbVotes":Number,
+    // "imdbVotes":Number,
     "imdbID":String,
     "Type":String,
     "DVD":String,
     "BoxOffice":String,
     "Production":String,
-    "Website":String,
-    "Response":Boolean
+    "Website":String
+    // "Response":Boolean
 });
 
 module.exports = mongoose.model("Omdb", OmdbSchema);

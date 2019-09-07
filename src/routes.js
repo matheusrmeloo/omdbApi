@@ -1,15 +1,17 @@
 const express = require(`Express`);
 
+
 const routes = express.Router();
 
+
+const OmdbController = require (`./controllers/OmdbController`);
 
 // app.post(`/filme`, (req, res) => {
 //     res.send('HelloWorld');
 // });
 
-routes.get(`/filme`, (req, res) => {
-    res.send('HelloWorld');
-});
+routes.get(`/filme`, OmdbController.index);
+routes.post(`/filme`, OmdbController.store);
 
 // app.get(`/filme/:id`, (req, res) => {
 //     const filme = courses.find(c => c.id === parseInt(req.params.id));
