@@ -7,9 +7,9 @@ const routes = express.Router();
 //     res.send('HelloWorld');
 // });
 
-// app.get(`/filme`, (req, res) => {
-//     res.send('HelloWorld');
-// });
+routes.get(`/filme`, (req, res) => {
+    res.send('HelloWorld');
+});
 
 // app.get(`/filme/:id`, (req, res) => {
 //     const filme = courses.find(c => c.id === parseInt(req.params.id));

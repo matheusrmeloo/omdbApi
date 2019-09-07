@@ -6,22 +6,12 @@ const mongoose = require('mongoose');
  
 mongoose.connect('mongodb://127.0.0.1:27017/OMDB', {useNewUrlParser: true});
 
-app.use(express.json());
+app.use(require(`./routes`));
 
 // app.use(function(req, res, next){
 //     console.log(`logging...`);
 // });
 
-
-
-
-    const index = courses.indexOf(course);
-    courses.splice(index,1);
-
-    res.send(course);
-    console.log(course);
-    console.log(courses);
-});
 
 
 
