@@ -11,5 +11,11 @@ module.exports = {
         const omdb1 = await Omdb.create(req.body);
 
         return res.json(omdb1);
+    },
+
+    async favList(req,res){
+        const omdbFav = await Omdb.findById(req.params.id);
+        return res.json(omdbFav);
     }
+
 };

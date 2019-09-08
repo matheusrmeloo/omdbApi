@@ -5,10 +5,9 @@ const routes = express.Router();
 
 
 const OmdbController = require (`./controllers/OmdbController`);
-const FavController = require (`./controllers/FavController`);
 
 routes.get(`/filme`, OmdbController.index);
 routes.post(`/filme`, OmdbController.store);
-routes.get(`/favs/:imdbID`), FavController.store;
+routes.get(`/filme/:id`, OmdbController.favList);
 
 module.exports = routes;
