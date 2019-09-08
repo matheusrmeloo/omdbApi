@@ -9,6 +9,6 @@ const FavController = require (`./controllers/FavController`);
 
 routes.get(`/filme`, OmdbController.index);
 routes.post(`/filme`, OmdbController.store);
-// routes.post(`/favs/:id`), FavController.store;
+routes.get(`/favs/:imdbID`), FavController.store;
 
 module.exports = routes;
