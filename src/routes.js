@@ -9,5 +9,6 @@ const OmdbController = require (`./controllers/OmdbController`);
 routes.get(`/filme`, OmdbController.index);
 routes.post(`/filme`, OmdbController.store);
 routes.get(`/filme/:id`, OmdbController.favList);
+routes.get(`/test`, OmdbController.SearchByTitle);
 
 module.exports = routes;
