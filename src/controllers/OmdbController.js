@@ -2,7 +2,7 @@ const Omdb = require(`../models/omdb`);
 const axios = require('axios');
 
 const search = `frozen`;
-const filme;
+const filme = [String];
 
 module.exports = {
     async index(req, res) {
@@ -40,6 +40,8 @@ module.exports = {
                 filme.foto = response.Poster,
                 filme.imdbRate = response.imdbRating,
                 filme.producao = response.Production
+
+                return res.json(filme);
             })
     }
 };
