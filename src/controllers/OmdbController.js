@@ -2,6 +2,7 @@ const Omdb = require(`../models/omdb`);
 const axios = require('axios');
 
 const search = `frozen`;
+const filme;
 
 module.exports = {
     async index(req, res) {
@@ -11,10 +12,10 @@ module.exports = {
     },
 
     async store(req, res) {
-        // axios.get(`http://www.omdbapi.com/?apikey=147b5624&t=${search}`)
-        // .then(function (response) {
-        //     console.log(response);
-        // })
+        
+        axios.get(`http://www.omdbapi.com/?apikey=147b5624&t=${search}`)
+        .then(function (response) {
+        })
 
         const omdb1 = await Omdb.create(req.body);
 
@@ -29,7 +30,16 @@ module.exports = {
     async SearchByTitle(req, res) {
         axios.get(`http://www.omdbapi.com/?apikey=147b5624&t=${search}`)
             .then(function (response) {
-                console.log(response);
+                filme.titulo = response.Title,
+                filme.imdbID = response.imdbID,
+                filme.ano = response.Year,
+                filme.duracao = response.Runtime,
+                filme.genero = response.Genre,
+                filme.atores = response.Actors,
+                filme.resumo = response.Plot,
+                filme.foto = response.Poster,
+                filme.imdbRate = response.imdbRating,
+                filme.producao = response.Production
             })
     }
 };
