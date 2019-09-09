@@ -1,7 +1,6 @@
 const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
-const omdb = new (require('omdbapi'))('147b5624');
 
 // http://www.omdbapi.com/?i=tt3896198&apikey=147b5624
  
