@@ -11,6 +11,11 @@ module.exports = {
     },
 
     async store(req, res) {
+        // axios.get(`http://www.omdbapi.com/?apikey=147b5624&t=${search}`)
+        // .then(function (response) {
+        //     console.log(response);
+        // })
+
         const omdb1 = await Omdb.create(req.body);
 
         return res.json(omdb1);
@@ -20,11 +25,11 @@ module.exports = {
         const omdbFav = await Omdb.findById(req.params.id);
         return res.json(omdbFav);
     },
+    
     async SearchByTitle(req, res) {
         axios.get(`http://www.omdbapi.com/?apikey=147b5624&t=${search}`)
             .then(function (response) {
                 console.log(response);
             })
     }
-
 };
