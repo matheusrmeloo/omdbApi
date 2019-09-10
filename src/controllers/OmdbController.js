@@ -24,9 +24,9 @@ module.exports = {
 
     async store(req, res) {
 
-        axios.get(`http://www.omdbapi.com/?apikey=147b5624&t=${search}`)
-            .then(function (response) {
-            })
+        // axios.get(`http://www.omdbapi.com/?apikey=147b5624&t=${search}`)
+        //     .then(function (response) {
+        //     })
 
         const omdb1 = await Omdb.create(req.body);
 
