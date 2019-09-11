@@ -33,6 +33,10 @@ module.exports = {
         return res.json(omdb1);
     },
 
+    async DeleteId(req,res){
+        
+    }
+
     async favList(req, res) {
         const omdbFav = await Omdb.findById(req.params.id);
         return res.json(omdbFav);
