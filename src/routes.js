@@ -10,5 +10,6 @@ routes.get(`/filme`, OmdbController.index);
 routes.post(`/filme`, OmdbController.store);
 routes.get(`/filme/:id`, OmdbController.favList);
 routes.get(`/filme/:titulo`, OmdbController.SearchByTitle);
+routes.delete(`/filme/:id`, OmdbController.DeleteId);
 
 module.exports = routes;

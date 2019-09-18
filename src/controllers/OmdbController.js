@@ -33,9 +33,9 @@ module.exports = {
         return res.json(omdb1);
     },
 
-    async DeleteId(req,res){
+    async DeleteId(req, res) {
         const deleteMovie = await Omdb.deleteOne(req.params.id);
-        
+        return res.send("filme deletado");
     },
 
     async favList(req, res) {
@@ -44,6 +44,7 @@ module.exports = {
     },
 
     async SearchByTitle(req, res) {
+
         axios.get(`http://www.omdbapi.com/?apikey=147b5624&t=${search}`)
             .then(function (response) {
                 filme.titulo = response.data.Title
