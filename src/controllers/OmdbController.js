@@ -34,7 +34,8 @@ module.exports = {
     },
 
     async DeleteId(req,res){
-        //Test Commit2
+        const deleteMovie = await Omdb.deleteOne(req.params.id);
+        
     },
 
     async favList(req, res) {
